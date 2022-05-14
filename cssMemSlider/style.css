@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    149deg,
+    rgb(37, 45, 46) 0%,
+    rgb(231, 183, 120) 100%
+  );
+  
+}
+
+.slider {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  
+}
+
+
+
