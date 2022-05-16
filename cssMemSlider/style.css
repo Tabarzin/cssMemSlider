@@ -7,32 +7,31 @@
 body {
   height: 100vh;
   display: flex;
-    justify-content: center;
-    align-items: center;
-  
+  justify-content: center;
+  align-items: center;
+
 
 }
 
 .container {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    149deg,
-    rgb(37, 45, 46) 0%,
-    rgb(231, 183, 120) 100%
-  );
-  
+  background: linear-gradient(149deg,
+      rgb(37, 45, 46) 0%,
+      rgb(231, 183, 120) 100%);
+
 }
 
 .slider {
-  width: 60%;
-  
-  height: 100%;
+  width: 56%;
+
+
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  
+
 }
 
 .images {
@@ -46,18 +45,18 @@ body {
   transition: all 0.15s ease;
 }
 
-.images input {
+.slider input {
   display: none;
 }
 
-.circles {
+.controls {
   display: flex;
   justify-content: flex-end;
   margin: 10px;
-  
+
 }
 
-.circles label {
+.controls label {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -67,42 +66,87 @@ body {
   margin: 5px;
 }
 
-.circles label:hover {
+.controls label:hover {
   background: red;
 }
 
-#image1:checked ~ .image-1 {
-  transform: translateX(0);
-
-}
-
-#image2:checked ~.image-2 {
+.image-1,
+.text1 {
   transform: translateX(-100%);
-  
+
 }
 
-#image3:checked ~ .image-3 {
-  transform: translateX(-200%);
-  
-}
-
-#image4:checked ~ .image-4 {
-  transform: translateX(-300%);
-  
-}
-
-.image-1 {
-  transform: translateX(-100%);
-}
-
-.image-2 {
+.image-2,
+.text2 {
   transform: translateX(0);
 }
 
-.image-3 {
+.image-3,
+.text3 {
   transform: translateX(200%);
+
 }
 
-.image-4 {
+.image-4,
+.text4 {
   transform: translateX(300%);
+}
+
+
+#image1:checked ~ .images .image-1,
+#image1:checked ~ .text-controls .text1
+ {
+  transform: translateX(0);
+}
+
+ 
+#image2:checked ~ .images .image-2,
+#image2:checked ~ .text-controls .text2 {
+  transform: translateX(-100%);
+
+}
+
+
+#image3:checked~ .images .image-3,
+#image3:checked~ .text-controls .text3 {
+  transform: translateX(-200%);
+
+}
+
+#image4:checked ~ .images .image-4,
+#image4:checked ~ .text-controls .text4 {
+  transform: translateX(-300%);
+
+}
+
+
+.text-controls {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.text {
+  
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  white-space: normal;
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(240, 235, 235);
 }
