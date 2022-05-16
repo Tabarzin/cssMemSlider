@@ -15,6 +15,7 @@ body {
 
 .container {
   height: 100vh;
+  max-width: 47rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +26,7 @@ body {
 }
 
 .slider {
-  width: 56%;
+  width: 57%;
 
 
   margin: 0 auto;
@@ -41,8 +42,8 @@ body {
 
 .images img {
   width: 100%;
-  height: 400px;
-  transition: all 0.15s ease;
+  height: auto;
+  transition: all 1.1s ease;
 }
 
 .slider input {
@@ -52,22 +53,25 @@ body {
 .controls {
   display: flex;
   justify-content: flex-end;
-  margin: 10px;
+  margin: 0.1rem;
 
 }
 
 .controls label {
-  height: 20px;
-  width: 20px;
+  height: 1.2rem;
+  width: 1.2rem;
   border-radius: 50%;
   border: solid burlywood 3px;
   cursor: pointer;
-  transition: all 0.15s ease;
-  margin: 5px;
+  
+  margin: 0.3rem;
+  
 }
 
+
+
 .controls label:hover {
-  background: red;
+  background: rgb(247, 244, 244);
 }
 
 .image-1,
@@ -146,7 +150,12 @@ body {
   height: 100%;
   display: inline-block;
   white-space: normal;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-family: 'Courier New', Courier, monospace;
   color: rgb(240, 235, 235);
+  transition: all 1.1s ease-out;
+}
+
+@media (max-width: 480px) {
+
 }
