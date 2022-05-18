@@ -21,7 +21,8 @@ body {
   max-width: 47rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
   
 
 }
